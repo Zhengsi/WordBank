@@ -1,7 +1,9 @@
 package com.example.myvocdb
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -26,5 +28,18 @@ class WordListActivity : AppCompatActivity() {
         recycleView_wordlist.adapter = WordListAdapter(this, data)
 
     }
-    
+
+    fun GoToMain (view: View){
+        //val myToast = Toast.makeText(this, "Hello Toast!", Toast.LENGTH_SHORT)
+        //myToast.show()
+
+        val mainIntent = Intent(this, MainActivity::class.java)
+        startActivity(mainIntent)
+
+
+    }
+
+
+
+
 }

@@ -48,7 +48,7 @@ class AudioRecordingActivity : AppCompatActivity() {
 
         findViewById<TextView>(R.id.wordText).text = newText
 
-        fileName = (SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(Date()) + ".mp3")
+        fileName = ("$newText - " + SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(Date()) + ".mp3")
 
         //Toast.makeText(applicationContext, fileName, Toast.LENGTH_LONG).show()
 
@@ -61,6 +61,8 @@ class AudioRecordingActivity : AppCompatActivity() {
         mediaRecorder?.setAudioSource(MediaRecorder.AudioSource.MIC)
         mediaRecorder?.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4)
         mediaRecorder?.setAudioEncoder(MediaRecorder.AudioEncoder.AAC)
+        //mediaRecorder?.setAudioEncodingBitRate(48000)
+       // mediaRecorder?.setAudioSamplingRate(38400)
         mediaRecorder?.setOutputFile(pathName)
 
 
