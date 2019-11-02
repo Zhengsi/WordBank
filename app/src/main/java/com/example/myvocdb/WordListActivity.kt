@@ -25,12 +25,6 @@ class WordListActivity : AppCompatActivity() {
         recycleView_wordlist.layoutManager = LinearLayoutManager(this)
         recycleView_wordlist.adapter = WordListAdapter(this, data)
 
-
-
-
     }
-
-
-
-
+    
 }

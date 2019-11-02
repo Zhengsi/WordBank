@@ -23,4 +23,24 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+   /* fun GoToAudio(view: View){
+        //val myToast = Toast.makeText(this, "Hello Toast!", Toast.LENGTH_SHORT)
+        //myToast.show()
+
+        val audioIntent = Intent(this, AudioRecordingActivity::class.java)
+        startActivity(audioIntent)
+
+
+    }*/
+
+    fun GoToWordList (view: View){
+        //val myToast = Toast.makeText(this, "Hello Toast!", Toast.LENGTH_SHORT)
+        //myToast.show()
+
+        val wlIntent = Intent(this, WordListActivity::class.java)
+        startActivity(wlIntent)
+
+
+    }
+
 }

@@ -43,4 +43,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_welcome" />
 
+    <Button
+        android:id="@+id/btn_go_to_word_list"
+        android:layout_width="103dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="60dp"
+        android:onClick="GoToWordList"
+        android:text="Word List"
+        app:layout_constraintStart_toStartOf="@+id/btn_new_entry"
+        app:layout_constraintTop_toBottomOf="@+id/btn_new_entry" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

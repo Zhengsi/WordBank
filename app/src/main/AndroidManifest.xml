@@ -9,10 +9,12 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:requestLegacyExternalStorage="false"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AudioRecordingActivity"></activity>
+        <activity android:name=".WordPageActivity"></activity>
+        <activity android:name=".AudioRecordingActivity" />
         <activity android:name=".WordListActivity" />
         <activity android:name=".NewEntryActivity" />
         <activity android:name=".MainActivity">

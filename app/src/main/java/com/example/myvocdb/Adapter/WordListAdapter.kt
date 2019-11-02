@@ -31,6 +31,7 @@ class WordListAdapter(mContext: Context, val items: ArrayList<Item>): RecyclerVi
     override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
         holder.itemView.textView_word.text = items.get(position).word
         holder.itemView.textView_mean.text = items.get(position).meaning
+        holder.itemView.textView_path.text = items.get(position).audioNotePath
     }
 
 
