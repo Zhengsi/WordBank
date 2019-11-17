@@ -8,11 +8,11 @@
 
     <Button
         android:id="@+id/btn_go_to_word_list"
-        android:onClick="goToAudioNote"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:text="Record an audio note -->"
+        android:onClick="goToAudioNote"
+        android:text="Go to Word List->"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.937"
@@ -46,8 +46,45 @@
             android:id="@+id/edit_text_new_word"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="New word" />
+            android:hint="Entry" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView_new_word"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.352" />
+
+    <ImageButton
+        android:id="@+id/voice_word_Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.738"
+        app:layout_constraintStart_toEndOf="@+id/textView_new_word"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.358"
+        app:srcCompat="@drawable/ic_mic_black_24dp" />
+
+    <ImageButton
+        android:id="@+id/voice_mean_Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.738"
+        app:layout_constraintStart_toEndOf="@+id/textView_new_word"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.594"
+        app:srcCompat="@drawable/ic_mic_black_24dp" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout_meaning"
@@ -61,12 +98,21 @@
             android:id="@+id/edit_text_meaning"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Explanation" />
+            android:hint="Notes" />
     </com.google.android.material.textfield.TextInputLayout>
 
-
-
-
+    <TextView
+        android:id="@+id/textView_new_meaning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.604" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
