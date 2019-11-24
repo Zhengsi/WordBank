@@ -25,7 +25,7 @@ This feature is accomplished with alarm receiver, notification, and randomizatio
 To-do list:
 - [x] Timer
 - [x] Notification
-- [ ] Push items according to previous repetion history
+- [ ] Push items according to previous repetition history
 
 
 **Screenshots**
