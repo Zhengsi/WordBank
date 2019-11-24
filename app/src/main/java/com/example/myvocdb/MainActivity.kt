@@ -46,6 +46,13 @@ class MainActivity : AppCompatActivity() {
                 Freq_Switch?.setOnCheckedChangeListener { _, isChecked ->
 
                     if (isChecked) {
+
+                       /* alarmManager.set(
+                            AlarmManager.RTC,
+                            SystemClock.elapsedRealtime(),
+                            alarmPendingIntent*/
+
+
                         alarmManager.setInexactRepeating(
                             AlarmManager.RTC,
                             SystemClock.elapsedRealtime(),
