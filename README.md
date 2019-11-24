@@ -26,3 +26,26 @@ To-do list:
 - [x] Timer
 - [x] Notification
 - [ ] Push items according to previous repetion history
+
+
+**Screenshots**
+
+Main page
+
+<img src="images/Main.png" width = 200 title = "Main Page"/>
+
+
+New Entry
+
+<img src="images/NewEntry.png" width = 200 title = "New Entry Page"/>
+
+
+Word List
+
+<img src="images/WordList.png" width = 200 title = "Word List Page"/>
+
+
+Notification for Repetition
+
+<img src="images/Repetition.png" width = 200 title = "Notification"/>
+
