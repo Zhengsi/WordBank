@@ -19,6 +19,7 @@ class DBHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME, null,
         private val COL_WORD = "WORD"
         private val COL_MEANING = "MEANING"
         private val COL_AUDIOPATH = "AUDIO_PATH"
+        private val COL_REVIEW = "COUNT_REVIEW"
 
     }
 
@@ -44,6 +45,7 @@ class DBHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME, null,
         contentValues.put(COL_WORD, item.word)
         contentValues.put(COL_MEANING, item.meaning)
         contentValues.put(COL_AUDIOPATH, item.audioNotePath)
+        //ContentValues.put(COL_REVIEW, item)
         db.insert(TABLE_NAME, null, contentValues)
 
     }
@@ -93,5 +95,10 @@ class DBHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME, null,
         cursor.close()
         return items
     }
+
+
+
+
+
 
 }

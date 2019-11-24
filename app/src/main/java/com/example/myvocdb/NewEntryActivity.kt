@@ -25,6 +25,8 @@ class NewEntryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_entry)
 
+        //this.textView_new_word.text = ""
+        //this.textView_new_meaning.text = ""
 
         voice_word_Btn.setOnClickListener {
           speak(REQUEST_CODE_SPEECH_INPUT_WORD)
@@ -39,8 +41,8 @@ class NewEntryActivity : AppCompatActivity() {
 
         val dbHelper = DBHelper(this)
 
-        var text_word = textView_new_word.text
-        var text_meaning = textView_new_meaning.text
+        var text_word = edit_text_new_word.text
+        var text_meaning = edit_text_meaning.text
 
 
         //Toast.makeText(applicationContext, "Data not saved", Toast.LENGTH_LONG).show()
@@ -56,8 +58,8 @@ class NewEntryActivity : AppCompatActivity() {
         audioIntent.putExtra("NEW_MEAN", text_meaning.toString())
         this.edit_text_new_word.setText("")
         this.edit_text_meaning.setText("")
-        this.textView_new_word.text = ""
-        this.textView_new_meaning.text = ""
+        //this.textView_new_word.text = ""
+        //this.textView_new_meaning.text = ""
         //Toast.makeText(applicationContext, "saved to db", Toast.LENGTH_LONG).show()
 
         startActivity(audioIntent)
@@ -109,7 +111,7 @@ class NewEntryActivity : AppCompatActivity() {
 
                     // set the text to text
                     edit_text_new_word.setText(result[0].toString())
-                    this.textView_new_word.text = edit_text_new_word.getText().toString()
+                    //this.textView_new_word.text = edit_text_new_word.getText().toString()
 
                 }
             }
@@ -121,7 +123,7 @@ class NewEntryActivity : AppCompatActivity() {
 
                     // set the text to text
                     edit_text_meaning.setText(result[0].toString())
-                    this.textView_new_meaning.text = edit_text_meaning.getText().toString()
+                    //this.textView_new_meaning.text = edit_text_meaning.getText().toString()
                 }
             }
 

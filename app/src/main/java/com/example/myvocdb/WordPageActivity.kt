@@ -36,11 +36,11 @@ class WordPageActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.textView_mean).text = newMean
 
 
-        audioFileName = intent.getStringExtra("FILE_PATH")
+        //audioFileName = intent.getStringExtra("FILE_PATH")
 
         //Toast.makeText(this, audioFileName, Toast.LENGTH_SHORT).show()
 
-        mediaPlayer = MediaPlayer.create(this, Uri.parse(audioFileName))
+        //mediaPlayer = MediaPlayer.create(this, Uri.parse(audioFileName))
 
         btn_start_playing.setOnClickListener {
 

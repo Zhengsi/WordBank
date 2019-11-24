@@ -13,50 +13,29 @@
         app:cardElevation="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
-
-        <TextView
-            android:id="@+id/textView_word"
-            android:layout_width="136dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="10dp"
-            android:text="TextView"
-            android:textColor="#141313"
-            android:textSize="20dp"
-            android:textStyle="bold" />
+        app:layout_constraintVertical_bias="1.0">
 
         <TextView
             android:id="@+id/textView_mean"
-            android:layout_width="401dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="50dp"
             android:layout_marginBottom="10dp"
             android:text="TextView"
             android:textSize="15dp" />
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="300dp"
-            android:layout_marginTop="20dp"
-            app:srcCompat="@android:drawable/ic_btn_speak_now"
-            tools:srcCompat="@android:drawable/ic_btn_speak_now" />
-
         <TextView
-            android:id="@+id/textView_path"
-            android:layout_width="240dp"
+            android:id="@+id/textView_word"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="150dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
             android:text="TextView"
-            android:visibility="invisible" />
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
 
     </androidx.cardview.widget.CardView>
 

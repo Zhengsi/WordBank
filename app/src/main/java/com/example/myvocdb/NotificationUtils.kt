@@ -1,23 +1,18 @@
 package com.example.myvocdb
 
+
 import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
-import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.os.Build
-import androidx.core.app.NotificationCompat
 import com.example.myvocdb.DBHelper.DBHelper
-
-
-// Notification ID.
-private val NOTIFICATION_ID = 0
-private val REQUEST_CODE = 0
-private val FLAGS = 0
-
+import com.example.myvocdb.Model.Item
+import java.util.*
+import kotlin.random.Random
 
 lateinit var notificationManager: NotificationManager
 lateinit var notificationChannel: NotificationChannel
@@ -27,17 +22,21 @@ val channelId = "com.example.myvocdb"
 val description = "My notification"
 
 
-
 fun NotificationManager.sendNotification(applicationContext: Context) {
+
 
     var dbHelper = DBHelper(applicationContext)
 
     var data = dbHelper.readAllWords()
 
-    val randomInteger = (1..data.size).shuffled().first()
+    //--------------------------------------------------------------------
 
-    var i = randomInteger
+    val randomInteger = Random.nextInt(0, data.size - 1)
 
+    val i = randomInteger
+
+
+    //---------------------------------------------------------------------
     val intent = Intent(applicationContext, WordListActivity::class.java)
 
     val pendingIntent = PendingIntent.getActivity(
@@ -58,18 +57,19 @@ fun NotificationManager.sendNotification(applicationContext: Context) {
 
 
         builder = Notification.Builder(applicationContext, channelId)
-            .setContentTitle(data[i].word)
-            .setContentText(data[i].meaning)
+            .setContentTitle(data[data.size - i].word)
+            .setContentText(data[data.size - i].meaning)
             .setSmallIcon(R.mipmap.ic_launcher)
             .setContentIntent(pendingIntent)
             .setAutoCancel(true)
             .setGroup(GROUP_VOCDB_REVIEW)
             .setGroupSummary(true)
+
     }
     else{
         builder = Notification.Builder(applicationContext)
-            .setContentTitle(data[i].word)
-            .setContentText(data[i].meaning)
+            .setContentTitle(data[data.size - i].word)
+            .setContentText(data[data.size - i].meaning)
             .setSmallIcon(R.mipmap.ic_launcher)
             .setContentIntent(pendingIntent)
             .setAutoCancel(true)
@@ -84,11 +84,6 @@ fun NotificationManager.sendNotification(applicationContext: Context) {
 
 
 
-// TODO: Step 1.14 Cancel all notifications
-/**
- * Cancels all notifications.
- *
- */
 fun NotificationManager.cancelNotifications() {
     cancelAll()
 }
